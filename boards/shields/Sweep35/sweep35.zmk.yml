@@ -1,0 +1,11 @@
+file_format: "1"
+id: sweep35
+name: Sweep35
+type: shield
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+siblings:
+  - sweep35_left
+  - sweep35_right
