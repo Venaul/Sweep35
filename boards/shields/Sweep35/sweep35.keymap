@@ -49,19 +49,19 @@
 
         Gaming {
             bindings = <
-  &kp TAB    &kp Q  &kp W  &kp E  &kp R        &trans  &trans  &trans  &trans  &trans
-  &kp LSHFT  &kp A  &kp S  &kp D  &kp F        &trans  &trans  &trans  &trans  &trans
-  &kp LCTRL  &kp Z  &kp X  &kp C  &kp V        &trans  &trans  &trans  &trans  &trans
-                    &kp M  &mo 4  &kp SPACE    &trans  &trans
+  &kp TAB    &kp Q  &kp W           &kp E  &kp R        &trans  &trans  &trans  &trans  &trans
+  &kp LSHFT  &kp A  &kp S           &kp D  &kp F        &trans  &trans  &trans  &trans  &trans
+  &kp LCTRL  &kp Z  &kp X           &kp C  &kp V        &trans  &trans  &trans  &trans  &trans
+                    &mt LEFT_ALT M  &mo 4  &kp SPACE    &trans  &trans
             >;
         };
 
         Gamingmod {
             bindings = <
-  &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4    &trans  &trans  &trans  &trans  &trans
-  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                   &trans  &trans  &trans    &trans  &trans
+  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &trans  &trans  &trans  &trans  &trans
+  &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0    &trans  &trans  &trans  &trans  &trans
+  &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
+                              &trans        &trans        &trans    &trans  &trans
             >;
         };
 
