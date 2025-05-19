@@ -1,4 +1,3 @@
-#define ZMK_BEHAVIORS_OMIT_KT
 #include <physical_layouts.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
