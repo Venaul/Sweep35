@@ -5,6 +5,13 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <sweep35-layouts.dtsi>
+
+// Assigning suitable kscan and matrix transforms
+physical_layout0 {
+    transform = <&default_transform>;
+    kscan = <&kscan0>;
+};
 
 
 / {
