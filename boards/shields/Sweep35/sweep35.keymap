@@ -125,7 +125,7 @@
             ;
     };
 };
-  Sweep35_position_map {
+  /Sweep35_position_map {
         compatible = "zmk,physical-layout-position-map";
 
         complete;
