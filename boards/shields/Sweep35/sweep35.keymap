@@ -3,90 +3,149 @@
 #include <dt-bindings/zmk/keys.h>
 #include <physical_layouts.dtsi>
 
-&kscan {
-    compatible = "zmk,kscan-gpio-matrix";
-    rows = <5>;
-    cols = <5>;
-    debounce-press-ms = <5>;
-    debounce-release-ms = <5>;
-    pinctrl-0 = <&default_pins>;
-    pinctrl-names = "default";
-};
+/ {
+    combos {
+        compatible = "zmk,combos";
+        timeout-ms = <50>;
 
-&matrix_transform {
-    compatible = "zmk,matrix-transform";
-    transform = <0 1 0 0 0 1 0 0 0>;
-};
+        Settingsmenu {
+            bindings = <&mo 5>;
+            key-positions = <15 16 17>;
+            layers = <0>;
+        };
 
-&position_map {
-    compatible = "zmk,physical-layout-position-map";
-    complete;
-
-    sweep35 {
-        physical-layout = <&sweep35_physical_layout>;
-        positions = <
-            0 1 2 3 4 22 21 20 19 18
-            5 6 7 8 9 27 26 25 24 23
-            10 11 12 13 14 32 31 30 29 28
-            0 0 15 16 17 34 33 0 0 0
-        >;
-    };
-};
-
-&keymap {
-    compatible = "zmk,keymap";
-
-    default_layer {
-        bindings = <
-            &kp Q &kp W &kp F &kp P &kp G &kp J &kp L &kp U &kp Y &kp APOS
-            &kp A &kp R &kp S &kp T &kp D &kp H &kp N &kp E &kp I &kp O
-            &mt LEFT_SHIFT Z &kp X &kp C &kp V &kp B &kp K &kp M &kp COMMA &kp DOT &mt RIGHT_SHIFT FSLH
-            &trans &trans &mt LALT TILDE &mt LCTRL DELETE &lt 1 SPACE &lt 2 ENTER &mt LC(BSPC) BACKSPACE &trans &trans &trans
-        >;
+        Escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
+            layers = <0>;
+        };
     };
 
-    layer_1 {
-        bindings = <
-            &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-            &kp TAB &kp LEFT &kp UP &kp RIGHT &kp LG(LS(S)) &kp C_VOLUME_UP &kp N4 &kp N5 &kp N6 &kp SEMI
-            &mt LEFT_SHIFT LS(TAB) &kp LG(TAB) &kp DOWN &kp C_PREVIOUS &kp C_NEXT &kp C_VOLUME_DOWN &kp N1 &kp N2 &kp N3 &kp DOT
-            &trans &trans &trans &trans &trans &mt LEFT_SHIFT ENTER &kp N0 &trans &trans &trans &trans
-        >;
+    keymap {
+        compatible = "zmk,keymap";
+
+        Default {
+            bindings = <
+  &kp Q             &kp W  &kp F           &kp P             &kp G          &kp J        &kp L                   &kp U      &kp Y    &kp APOS
+  &kp A             &kp R  &kp S           &kp T             &kp D          &kp H        &kp N                   &kp E      &kp I    &kp O
+  &mt LEFT_SHIFT Z  &kp X  &kp C           &kp V             &kp B          &kp K        &kp M                   &kp COMMA  &kp DOT  &mt RIGHT_SHIFT FSLH
+  &trans            &trans &mt LALT TILDE  &mt LCTRL DELETE  &lt 1 SPACE    &lt 2 ENTER  &mt LC(BSPC) BACKSPACE  &trans     &trans   &trans
+            >;
+            position-map = <&sweep35>;
+        };
+
+        layer_1 {
+            bindings = <
+  &kp N1                  &kp N2       &kp N3    &kp N4          &kp N5           &kp N6                &kp N7  &kp N8  &kp N9  &kp N0
+  &kp TAB                 &kp LEFT     &kp UP    &kp RIGHT       &kp LG(LS(S))    &kp C_VOLUME_UP       &kp N4  &kp N5  &kp N6  &kp SEMI
+  &mt LEFT_SHIFT LS(TAB)  &kp LG(TAB)  &kp DOWN  &kp C_PREVIOUS  &kp C_NEXT       &kp C_VOLUME_DOWN     &kp N1  &kp N2  &kp N3  &kp DOT
+  &trans                  &trans       &trans    &trans          &trans           &mt LEFT_SHIFT ENTER  &kp N0  &trans  &trans  &trans
+            >;
+            position-map = <&sweep35>;
+        };
+
+        layer_2 {
+            bindings = <
+  &kp F1  &kp F2    &kp F3         &kp F4   &kp F5    &kp F6     &kp F7          &kp F8          &kp F9           &kp F10
+  &trans  &kp HOME  &kp PAGE_UP    &kp END  &trans    &kp PLUS   &kp MINUS       &kp LBKT        &kp RBKT         &trans
+  &trans  &trans    &kp PAGE_DOWN  &trans   &trans    &kp EQUAL  &kp UNDERSCORE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
+  &trans  &trans    &trans         &trans   &trans    &trans     &trans          &trans          &trans           &trans
+            >;
+            position-map = <&sweep35>;
+        };
+
+        Gaming {
+            bindings = <
+  &kp TAB    &kp Q  &kp W           &kp E  &kp R        &trans  &trans  &trans  &trans  &trans
+  &kp LSHFT  &kp A  &kp S           &kp D  &kp F        &trans  &trans  &trans  &trans  &trans
+  &kp LCTRL  &kp Z  &kp X           &kp C  &kp V        &trans  &trans  &trans  &trans  &trans
+  &trans     &trans &mt LEFT_ALT M  &mo 4  &kp SPACE    &trans  &trans  &trans  &trans  &trans
+            >;
+            position-map = <&sweep35>;
+        };
+
+        Gamingmod {
+            bindings = <
+  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &trans  &trans  &trans  &trans  &trans
+  &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0    &trans  &trans  &trans  &trans  &trans
+  &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
+  &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+            position-map = <&sweep35>;
+        };
+
+        Settings {
+            bindings = <
+  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans
+  &bt BT_CLR    &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans
+  &tog 3        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans
+  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+            position-map = <&sweep35>;
+        };
     };
 
-    layer_2 {
-        bindings = <
-            &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
-            &trans &kp HOME &kp PAGE_UP &kp END &trans &kp PLUS &kp MINUS &kp LBKT &kp RBKT &trans
-            &trans &trans &kp PAGE_DOWN &trans &trans &kp EQUAL &kp UNDERSCORE &kp LEFT_BRACE &kp RIGHT_BRACE &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-        >;
+    sweep35_physical_layout: sweep35_physical_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "sweep35";
+
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
+
+        keys = 
+            <&key_physical_attrs 100 100    0  100       0     0     0>
+          , <&key_physical_attrs 100 100  100   30       0     0     0>
+          , <&key_physical_attrs 100 100  200    0       0     0     0>
+          , <&key_physical_attrs 100 100  300   12       0     0     0>
+          , <&key_physical_attrs 100 100  400   25       0     0     0>
+          , <&key_physical_attrs 100 100    0  200       0     0     0>
+          , <&key_physical_attrs 100 100  100  130       0     0     0>
+          , <&key_physical_attrs 100 100  200  100       0     0     0>
+          , <&key_physical_attrs 100 100  300  112       0     0     0>
+          , <&key_physical_attrs 100 100  400  125       0     0     0>
+          , <&key_physical_attrs 100 100    0  300       0     0     0>
+          , <&key_physical_attrs 100 100  100  229       0     0     0>
+          , <&key_physical_attrs 100 100  200  200       0     0     0>
+          , <&key_physical_attrs 100 100  300  212       0     0     0>
+          , <&key_physical_attrs 100 100  400  225       0     0     0>
+          , <&key_physical_attrs 100 100  248  312       0     0     0>
+          , <&key_physical_attrs 100 100  248  312    1500   298   789>
+          , <&key_physical_attrs 100 100  248  312    3000   298   789>
+          , <&key_physical_attrs 100 100 1200  100       0     0     0>
+          , <&key_physical_attrs 100 100 1100   30       0     0     0>
+          , <&key_physical_attrs 100 100 1000    0       0     0     0>
+          , <&key_physical_attrs 100 100  900   12       0     0     0>
+          , <&key_physical_attrs 100 100  800   25       0     0     0>
+          , <&key_physical_attrs 100 100 1200  200       0     0     0>
+          , <&key_physical_attrs 100 100 1100  130       0     0     0>
+          , <&key_physical_attrs 100 100 1000  100       0     0     0>
+          , <&key_physical_attrs 100 100  900  112       0     0     0>
+          , <&key_physical_attrs 100 100  800  125       0     0     0>
+          , <&key_physical_attrs 100 100 1200  300       0     0     0>
+          , <&key_physical_attrs 100 100 1100  229       0     0     0>
+          , <&key_physical_attrs 100 100 1000  200       0     0     0>
+          , <&key_physical_attrs 100 100  900  212       0     0     0>
+          , <&key_physical_attrs 100 100  800  225       0     0     0>
+          , <&key_physical_attrs 100 100  952  312 (-1500)  1002   789>
+          , <&key_physical_attrs 100 100  952  312 (-3000)  1002   789>;
     };
 
-    gaming {
-        bindings = <
-            &kp TAB &kp Q &kp W &kp E &kp R &trans &trans &trans &trans &trans
-            &kp LSHFT &kp A &kp S &kp D &kp F &trans &trans &trans &trans &trans
-            &kp LCTRL &kp Z &kp X &kp C &kp V &trans &trans &trans &trans &trans
-            &trans &trans &mt LEFT_ALT M &mo 4 &kp SPACE &trans &trans &trans &trans &trans
-        >;
-    };
+    sweep35_position_map {
+        compatible = "zmk,physical-layout-position-map";
+        complete;
 
-    gamingmod {
-        bindings = <
-            &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp N5 &trans &trans &trans &trans &trans
-            &kp NUMBER_6 &kp N7 &kp N8 &kp N9 &kp N0 &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-        >;
-    };
+        sweep35: sweep35 {
+            physical-layout = <&sweep35_physical_layout>;
 
-    settings {
-        bindings = <
-            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans
-            &bt BT_CLR &trans &trans &trans &trans &trans &trans &trans &trans &trans
-            &tog 3 &trans &trans &trans &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-        >;
+            positions =
+                // Row 0 (left to right)
+                <  0  1  2  3  4  22 21 20 19 18 >,
+                // Row 1
+                <  5  6  7  8  9  27 26 25 24 23 >,
+                // Row 2
+                < 10 11 12 13 14 32 31 30 29 28 >,
+                // Row 3 (thumbs left + right) + padding
+                <  0  0 15 16 17 34 33  0  0  0 >;
+        };
     };
 };
