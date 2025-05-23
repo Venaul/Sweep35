@@ -15,6 +15,7 @@
         compatible = "zmk,keyboard";
         label = "Sweep35 Left Half";
 
+        matrix-transform = <&default_transform>;
         kscan = <&kscan0>;
         keymap = <&sweep35>;
     };
