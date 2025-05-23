@@ -20,7 +20,7 @@
         keymap = <&sweep35>;
     };
 
-    &default_transform {
+    default_transform {
         col-offset = <18>;
     };
 };
