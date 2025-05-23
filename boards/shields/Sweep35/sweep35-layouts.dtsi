@@ -1,11 +1,15 @@
+#include <physical_layouts.dtsi>
+
+/ {
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "Sweep35";
         transform = <&default_transform>;
         kscan = <&kscan0>;
 
-        keys  //                     w   h    x    y     rot    rx    ry
-            = <&key_physical_attrs 100 100    0  100       0     0     0>
+        keys = <
+                      //   label     w   h    x    y        r     rx    ry
+            =  <&key_physical_attrs 100 100    0  100       0     0     0>
 ~            , <&key_physical_attrs 100 100  100   30       0     0     0>
 ~            , <&key_physical_attrs 100 100  200    0       0     0     0>
 ~            , <&key_physical_attrs 100 100  300   12       0     0     0>
