@@ -85,7 +85,7 @@
         };
     };
 
-    sweep35_physical_layout: sweep35_physical_layout {
+    sweep35_physical_layout: physical_layout {
         compatible = "zmk,physical-layout";
         display-name = "sweep35";
 
