@@ -9,3 +9,12 @@
 &default_transform {
     col-offset = <18>;
 };
+
+&sweep35_physical_layout {
+    zmk,studio-metadata = {
+        friendly-name = "Sweep35 right";
+        variant = "right";
+        layout = "split_3x5_3";
+    };
+};
+
