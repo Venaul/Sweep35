@@ -5,3 +5,11 @@
  */
 
 #include "sweep35.dtsi"
+
+&sweep35_physical_layout {
+    zmk,studio-metadata = {
+        friendly-name = "Sweep35 Left";
+        variant = "left";
+        layout = "split_3x5_3";
+    };
+};
