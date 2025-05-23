@@ -4,75 +4,61 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        Settingsmenu {
-            bindings = <&mo 5>;
-            key-positions = <30 31 32>;
-        };
-
-        Escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <0 1>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
-        Default {
+        default_layer {
             bindings = <
-  &kp Q             &kp W  &kp F           &kp P             &kp G          &kp J        &kp L                   &kp U      &kp Y    &kp APOS
-  &kp A             &kp R  &kp S           &kp T             &kp D          &kp H        &kp N                   &kp E      &kp I    &kp O
-  &mt LEFT_SHIFT Z  &kp X  &kp C           &kp V             &kp B          &kp K        &kp M                   &kp COMMA  &kp DOT  &mt RIGHT_SHIFT FSLH
-                           &mt LALT TILDE  &mt LCTRL DELETE  &lt 1 SPACE    &lt 2 ENTER  &mt LC(BSPC) BACKSPACE
+                // Row 1
+                &kp_0   &kp_1   &kp_2   &kp_3   &kp_4   &kp_5   &kp_6   &kp_7   &kp_8   &kp_9
+                // Row 2
+                &kp_10  &kp_11  &kp_12  &kp_13  &kp_14  &kp_15  &kp_16  &kp_17  &kp_18  &kp_19
+                // Row 3
+                &kp_20  &kp_21  &kp_22  &kp_23  &kp_24  &kp_25  &kp_26  &kp_27  &kp_28  &kp_29
+                // Thumbs (center 5 keys)
+                &kp_30  &kp_31  &kp_32  &kp_33  &kp_34
             >;
         };
 
-        layer_1 {
-            bindings = <
-  &kp N1                  &kp N2       &kp N3    &kp N4          &kp N5           &kp N6                &kp N7  &kp N8  &kp N9  &kp N0
-  &kp TAB                 &kp LEFT     &kp UP    &kp RIGHT       &kp LG(LS(S))    &kp C_VOLUME_UP       &kp N4  &kp N5  &kp N6  &kp SEMI
-  &mt LEFT_SHIFT LS(TAB)  &kp LG(TAB)  &kp DOWN  &kp C_PREVIOUS  &kp C_NEXT       &kp C_VOLUME_DOWN     &kp N1  &kp N2  &kp N3  &kp DOT
-                                       &trans    &trans          &trans           &mt LEFT_SHIFT ENTER  &kp N0
-            >;
-        };
+        bindings {
+            kp_0  { label = "Q";   behavior = &kp KC_Q;   };
+            kp_1  { label = "W";   behavior = &kp KC_W;   };
+            kp_2  { label = "F";   behavior = &kp KC_F;   };
+            kp_3  { label = "P";   behavior = &kp KC_P;   };
+            kp_4  { label = "G";   behavior = &kp KC_G;   };
+            kp_5  { label = "J";   behavior = &kp KC_J;   };
+            kp_6  { label = "L";   behavior = &kp KC_L;   };
+            kp_7  { label = "U";   behavior = &kp KC_U;   };
+            kp_8  { label = "Y";   behavior = &kp KC_Y;   };
+            kp_9  { label = ";";   behavior = &kp KC_SCLN; };
 
-        layer_2 {
-            bindings = <
-  &kp F1  &kp F2    &kp F3         &kp F4   &kp F5    &kp F6     &kp F7          &kp F8          &kp F9           &kp F10
-  &trans  &kp HOME  &kp PAGE_UP    &kp END  &trans    &kp PLUS   &kp MINUS       &kp LBKT        &kp RBKT         &trans
-  &trans  &trans    &kp PAGE_DOWN  &trans   &trans    &kp EQUAL  &kp UNDERSCORE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
-                    &trans         &trans   &trans    &trans     &trans
-            >;
-        };
+            kp_10 { label = "A";   behavior = &kp KC_A;   };
+            kp_11 { label = "R";   behavior = &kp KC_R;   };
+            kp_12 { label = "S";   behavior = &kp KC_S;   };
+            kp_13 { label = "T";   behavior = &kp KC_T;   };
+            kp_14 { label = "D";   behavior = &kp KC_D;   };
+            kp_15 { label = "H";   behavior = &kp KC_H;   };
+            kp_16 { label = "N";   behavior = &kp KC_N;   };
+            kp_17 { label = "E";   behavior = &kp KC_E;   };
+            kp_18 { label = "I";   behavior = &kp KC_I;   };
+            kp_19 { label = "O";   behavior = &kp KC_O;   };
 
-        Gaming {
-            bindings = <
-  &kp TAB    &kp Q  &kp W           &kp E  &kp R        &trans  &trans  &trans  &trans  &trans
-  &kp LSHFT  &kp A  &kp S           &kp D  &kp F        &trans  &trans  &trans  &trans  &trans
-  &kp LCTRL  &kp Z  &kp X           &kp C  &kp V        &trans  &trans  &trans  &trans  &trans
-                    &mt LEFT_ALT M  &mo 4  &kp SPACE    &trans  &trans
-            >;
-        };
+            kp_20 { label = "Z";   behavior = &kp KC_Z;   };
+            kp_21 { label = "X";   behavior = &kp KC_X;   };
+            kp_22 { label = "C";   behavior = &kp KC_C;   };
+            kp_23 { label = "V";   behavior = &kp KC_V;   };
+            kp_24 { label = "B";   behavior = &kp KC_B;   };
+            kp_25 { label = "K";   behavior = &kp KC_K;   };
+            kp_26 { label = "M";   behavior = &kp KC_M;   };
+            kp_27 { label = ",";   behavior = &kp KC_COMM; };
+            kp_28 { label = ".";   behavior = &kp KC_DOT;  };
+            kp_29 { label = "/";   behavior = &kp KC_SLSH; };
 
-        Gamingmod {
-            bindings = <
-  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &trans  &trans  &trans  &trans  &trans
-  &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0    &trans  &trans  &trans  &trans  &trans
-  &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
-                              &trans        &trans        &trans    &trans  &trans
-            >;
-        };
-
-        Settings {
-            bindings = <
-  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4          &trans  &trans  &trans  &trans  &trans
-  &bt BT_CLR    &trans        &trans        &trans        &trans                &trans  &trans  &trans  &trans  &trans
-  &tog 3        &trans        &trans        &trans        &kp LC(LA(DELETE))    &trans  &trans  &trans  &trans  &trans
-                              &trans        &trans        &trans                &trans  &trans
-            >;
+            kp_30 { label = "GUI";     behavior = &kp KC_LGUI;  };
+            kp_31 { label = "TAB";     behavior = &kp KC_TAB;   };
+            kp_32 { label = "SPACE";   behavior = &kp KC_SPC;   };
+            kp_33 { label = "ENTER";   behavior = &kp KC_ENT;   };
+            kp_34 { label = "BACKSP";  behavior = &kp KC_BSPC;  };
         };
     };
 };
