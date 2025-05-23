@@ -4,7 +4,7 @@
  */
 
 #include "dt-bindings/zmk/matrix_transform.h"
-#include "sweep35-layouts.dtsi"
+//#include "sweep35-layouts.dtsi"
 
 physical_layout0 {
     transform = <&default_transform>;
