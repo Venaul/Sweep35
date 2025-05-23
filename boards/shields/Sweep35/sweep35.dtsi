@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <dt-bindings/zmk/matrix_transform.h>
-#include <sweep35-layouts.dtsi>
+#include "dt-bindings/zmk/matrix_transform.h"
+#include "sweep35-layouts.dtsi"
 
 // Assigning suitable kscan and matrix transforms
 physical_layout0 {
