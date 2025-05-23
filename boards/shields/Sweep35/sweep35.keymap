@@ -31,7 +31,7 @@
   &mt LEFT_SHIFT Z  &kp X  &kp C           &kp V             &kp B          &kp K        &kp M                   &kp COMMA  &kp DOT  &mt RIGHT_SHIFT FSLH
   &trans            &trans &mt LALT TILDE  &mt LCTRL DELETE  &lt 1 SPACE    &lt 2 ENTER  &mt LC(BSPC) BACKSPACE  &trans     &trans   &trans
             >;
-            position-map = <&sweep35>;
+
         };
 
         layer_1 {
@@ -41,7 +41,7 @@
   &mt LEFT_SHIFT LS(TAB)  &kp LG(TAB)  &kp DOWN  &kp C_PREVIOUS  &kp C_NEXT       &kp C_VOLUME_DOWN     &kp N1  &kp N2  &kp N3  &kp DOT
   &trans                  &trans       &trans    &trans          &trans           &mt LEFT_SHIFT ENTER  &kp N0  &trans  &trans  &trans
             >;
-            position-map = <&sweep35>;
+
         };
 
         layer_2 {
@@ -51,7 +51,7 @@
   &trans  &trans    &kp PAGE_DOWN  &trans   &trans    &kp EQUAL  &kp UNDERSCORE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
   &trans  &trans    &trans         &trans   &trans    &trans     &trans          &trans          &trans           &trans
             >;
-            position-map = <&sweep35>;
+
         };
 
         Gaming {
@@ -61,7 +61,7 @@
   &kp LCTRL  &kp Z  &kp X           &kp C  &kp V        &trans  &trans  &trans  &trans  &trans
   &trans     &trans &mt LEFT_ALT M  &mo 4  &kp SPACE    &trans  &trans  &trans  &trans  &trans
             >;
-            position-map = <&sweep35>;
+
         };
 
         Gamingmod {
@@ -71,7 +71,7 @@
   &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
   &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
             >;
-            position-map = <&sweep35>;
+
         };
 
         Settings {
@@ -81,7 +81,7 @@
   &tog 3        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans
   &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans
             >;
-            position-map = <&sweep35>;
+
         };
     };
 
