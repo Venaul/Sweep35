@@ -17,6 +17,6 @@
 
         matrix-transform = <&default_transform>;
         kscan = <&kscan0>;
-        keymap = <&keymap_left>;
+        keymap = <&sweep35>;
     };
 };
