@@ -6,15 +6,21 @@
 
 #include "sweep35.dtsi"
 
-&default_transform {
-    col-offset = <18>;
-};
+/ {
+    chosen {
+        zmk,keyboard = &sweep35_right;
+    };
 
-&sweep35_physical_layout {
-    zmk,studio-metadata = {
-        friendly-name = "Sweep35 right";
-        variant = "right";
-        layout = "split_3x5_3";
+    sweep35_right: sweep35_right {
+        compatible = "zmk,keyboard";
+        label = "Sweep35 Right Half";
+
+        matrix-transform = <&default_transform>;
+        kscan = <&kscan0>;
+        keymap = <&keymap_right>;
+    };
+
+    &default_transform {
+        col-offset = <18>;
     };
 };
-
