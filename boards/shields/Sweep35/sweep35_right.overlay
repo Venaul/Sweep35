@@ -17,10 +17,10 @@
 
         matrix-transform = <&default_transform>;
         kscan = <&kscan0>;
-        keymap = <&keymap_right>;
+        keymap = <&sweep35>;
     };
 
     &default_transform {
-        col-offset = <18>;
+        col-offset = <5>;
     };
 };
