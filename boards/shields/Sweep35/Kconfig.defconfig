@@ -17,6 +17,3 @@ config ZMK_SPLIT
     default y
 
 endif
-
-CONFIG_ZMK_STUDIO=y
-CONFIG_ZMK_STUDIO_LOCKING=n
