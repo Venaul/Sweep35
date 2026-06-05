@@ -25,7 +25,9 @@
             , <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
-
+    &default_transform {
+        col-offset = <18>;
+    };
     sweep35_right_physical_layout: sweep35_right_physical_layout {
         compatible = "zmk,physical-layout";
         display-name = "Sweep35 Right";
@@ -49,8 +51,5 @@
             <&key_physical_attrs 100 100 1200  300       0     0     0>,
             <&key_physical_attrs 100 100  952  312 (-3000)  1002   789>,
             <&key_physical_attrs 100 100  952  312 (-1500)  1002   789>;
-    };
-    &default_transform {
-        col-offset = <17>;
     };
 };
