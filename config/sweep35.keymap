@@ -20,6 +20,11 @@
             bindings = <&kp LEFT_WIN>;
             key-positions = <34 33>;
         };
+
+        ctrl_alt_del {
+            bindings = <&kp LC(LA(DELETE))>;
+            key-positions = <31 30 32 24>;
+        };
     };
 
     keymap {
@@ -36,18 +41,18 @@
 
         layer_1 {
             bindings = <
-  &kp N1                  &kp N2       &kp N3    &kp N4          &kp N5           &kp N6                &kp N7  &kp N8  &kp N9  &kp N0
-  &kp TAB                 &kp LEFT     &kp UP    &kp RIGHT       &kp LG(LS(S))    &kp C_VOLUME_UP       &kp N4  &kp N5  &kp N6  &kp SEMI
-  &mt LEFT_SHIFT LS(TAB)  &kp LG(TAB)  &kp DOWN  &kp C_PREVIOUS  &kp C_NEXT       &kp C_VOLUME_DOWN     &kp N1  &kp N2  &kp N3  &kp DOT
-                                       &trans    &trans          &trans           &mt LEFT_SHIFT ENTER  &kp N0
+  &kp N1                   &kp N2       &kp N3    &kp N4          &kp N5           &kp N6                &kp N7  &kp N8  &kp N9  &kp N0
+  &kp TAB                  &kp LEFT     &kp UP    &kp RIGHT       &kp LG(LS(S))    &kp C_VOLUME_UP       &kp N4  &kp N5  &kp N6  &kp SEMI
+  &mt LEFT_SHIFT LS(CAPS)  &kp LG(TAB)  &kp DOWN  &kp C_PREVIOUS  &kp C_NEXT       &kp C_VOLUME_DOWN     &kp N1  &kp N2  &kp N3  &kp DOT
+                                        &trans    &trans          &trans           &mt LEFT_SHIFT ENTER  &kp N0
             >;
         };
 
         layer_2 {
             bindings = <
   &kp F1  &kp F2    &kp F3         &kp F4   &kp F5    &kp F6     &kp F7          &kp F8          &kp F9           &kp F10
-  &trans  &kp HOME  &kp PAGE_UP    &kp END  &trans    &kp PLUS   &kp MINUS       &kp LBKT        &kp RBKT         &trans
-  &trans  &trans    &kp PAGE_DOWN  &trans   &trans    &kp EQUAL  &kp UNDERSCORE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
+  &trans  &kp HOME  &kp PAGE_UP    &kp END  &trans    &kp PLUS   &kp MINUS       &kp LBKT        &kp RBKT         &kp F11
+  &trans  &trans    &kp PAGE_DOWN  &trans   &trans    &kp EQUAL  &kp UNDERSCORE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BACKSLASH
                     &trans         &trans   &trans    &trans     &trans
             >;
         };
