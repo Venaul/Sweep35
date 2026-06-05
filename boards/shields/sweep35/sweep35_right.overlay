@@ -1,6 +1,10 @@
 #include <physical_layouts.dtsi>
 #include "sweep35.dtsi"
 
+    &default_transform {
+        col-offset = <18>;
+    };
+
 / {
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-direct";
@@ -51,7 +55,4 @@
             <&key_physical_attrs 100 100  952  312 (-1500)  1002   789>;
     };
 
-    &default_transform {
-        col-offset = <18>;
-    };
 };
