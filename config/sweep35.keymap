@@ -25,6 +25,11 @@
             bindings = <&kp LC(LA(DELETE))>;
             key-positions = <31 30 32 24>;
         };
+
+        Mouse_Jump {
+            bindings = <&kp LG(LS(D))>;
+            key-positions = <0 10 20>;
+        };
     };
 
     keymap {
@@ -41,10 +46,10 @@
 
         layer_1 {
             bindings = <
-  &kp N1                   &kp N2       &kp N3    &kp N4          &kp N5           &kp N6                &kp N7  &kp N8  &kp N9  &kp N0
-  &kp TAB                  &kp LEFT     &kp UP    &kp RIGHT       &kp LG(LS(S))    &kp C_VOLUME_UP       &kp N4  &kp N5  &kp N6  &kp SEMI
-  &mt LEFT_SHIFT LS(CAPS)  &kp LG(TAB)  &kp DOWN  &kp C_PREVIOUS  &kp C_NEXT       &kp C_VOLUME_DOWN     &kp N1  &kp N2  &kp N3  &kp DOT
-                                        &trans    &trans          &trans           &mt LEFT_SHIFT ENTER  &kp N0
+  &kp N1                   &kp N2    &kp N3    &kp N4          &kp N5           &kp N6                &kp N7  &kp N8  &kp N9  &kp N0
+  &kp TAB                  &kp LEFT  &kp UP    &kp RIGHT       &kp LG(LS(S))    &kp C_VOLUME_UP       &kp N4  &kp N5  &kp N6  &kp SEMI
+  &mt LEFT_SHIFT LS(CAPS)  &trans    &kp DOWN  &kp C_PREVIOUS  &kp C_NEXT       &kp C_VOLUME_DOWN     &kp N1  &kp N2  &kp N3  &kp DOT
+                                     &trans    &trans          &trans           &mt LEFT_SHIFT ENTER  &kp N0
             >;
         };
 
